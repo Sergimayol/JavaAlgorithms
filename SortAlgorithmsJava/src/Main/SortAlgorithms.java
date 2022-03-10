@@ -23,18 +23,28 @@ public class SortAlgorithms {
     }
 
     private void inicio() {
-        ordenar(10);
-        ordenar(100);
-        ordenar(1000);
-        ordenar(10000);
-        ordenar(100000);
-        ordenar(200000);
-        ordenar(300000);
-        ordenar(500000);
-        ordenar(600000);
+        int[] valores = new int[15];
+        valores[0] = 10;
+        valores[1] = 100;
+        valores[2] = 1000;
+        valores[3] = 10000;
+        valores[4] = 100000;
+        valores[5] = 200000;
+        valores[6] = 300000;
+        valores[7] = 500000;
+        valores[8] = 600000;
+        valores[9] = 700000;
+        valores[10] = 800000;
+        valores[11] = 900000;
+        valores[12] = 1000000;
+        valores[13] = 1100000;
+        valores[14] = 1500000;
+        for (int i = 0; i < valores.length; i++) {
+            ordenarQuickSort(valores[i]);
+        }
     }
 
-    private void ordenar(int n) {
+    private void ordenarQuickSort(int n) {
         Integer[] l = generateRandomArray(n);
         QuickSort q = new QuickSort();
         long inicio = System.currentTimeMillis();
