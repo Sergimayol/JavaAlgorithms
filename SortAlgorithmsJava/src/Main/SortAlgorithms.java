@@ -23,7 +23,6 @@ public class SortAlgorithms {
     }
 
     private void inicio() {
-        /*
         int[] valores = new int[15];
         valores[0] = 10;
         valores[1] = 100;
@@ -40,11 +39,18 @@ public class SortAlgorithms {
         valores[12] = 1000000;
         valores[13] = 1100000;
         valores[14] = 1500000;
+        System.out.println("\ngenerateRandomArray");
         for (int i = 0; i < valores.length; i++) {
             ordenarQuickSort(valores[i], 0);
-        }*/
-        ordenarQuickSort(10, 1);
-        ordenarQuickSort(10, 2);
+        }
+        System.out.println("\ngenerateOrderedArray");
+        for (int i = 0; i < valores.length; i++) {
+            ordenarQuickSort(valores[i], 1);
+        }
+        System.out.println("\ngenerateInvertedArray");
+        for (int i = 0; i < valores.length; i++) {
+            ordenarQuickSort(valores[i], 2);
+        }
     }
 
     private void ordenarQuickSort(int n, int op) {
@@ -62,13 +68,13 @@ public class SortAlgorithms {
             default:
                 throw new AssertionError();
         }
-        System.out.println("");
-        System.out.println(Arrays.toString(l));
+//        System.out.println("");
+//        System.out.println(Arrays.toString(l));
         QuickSort q = new QuickSort();
         long inicio = System.currentTimeMillis();
         q.sort(l);
         long fin = System.currentTimeMillis();
-        System.out.println(Arrays.toString(l));
+//        System.out.println(Arrays.toString(l));
         System.out.println("Length: " + n + "\nTiempo(ms): " + (fin - inicio));
     }
 
