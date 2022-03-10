@@ -23,6 +23,7 @@ public class SortAlgorithms {
     }
 
     private void inicio() {
+        /*
         int[] valores = new int[15];
         valores[0] = 10;
         valores[1] = 100;
@@ -40,16 +41,34 @@ public class SortAlgorithms {
         valores[13] = 1100000;
         valores[14] = 1500000;
         for (int i = 0; i < valores.length; i++) {
-            ordenarQuickSort(valores[i]);
-        }
+            ordenarQuickSort(valores[i], 0);
+        }*/
+        ordenarQuickSort(10, 1);
+        ordenarQuickSort(10, 2);
     }
 
-    private void ordenarQuickSort(int n) {
-        Integer[] l = generateRandomArray(n);
+    private void ordenarQuickSort(int n, int op) {
+        Integer[] l = null;
+        switch (op) {
+            case 0:
+                l = generateRandomArray(n);
+                break;
+            case 1:
+                l = generateOrderedArray(n);
+                break;
+            case 2:
+                l = generateInvertedArray(n);
+                break;
+            default:
+                throw new AssertionError();
+        }
+        System.out.println("");
+        System.out.println(Arrays.toString(l));
         QuickSort q = new QuickSort();
         long inicio = System.currentTimeMillis();
         q.sort(l);
         long fin = System.currentTimeMillis();
+        System.out.println(Arrays.toString(l));
         System.out.println("Length: " + n + "\nTiempo(ms): " + (fin - inicio));
     }
 
@@ -66,4 +85,43 @@ public class SortAlgorithms {
         }
         return lista;
     }
+
+    public static Integer[] generateOrderedArray(int n) {
+        Integer[] lista = new Integer[n];
+        Random ran;
+        try {
+            ran = new Random(12);
+            for (int i = 0; i < lista.length; i++) {
+                lista[i] = ran.nextInt(10000);
+            }
+            QuickSort q = new QuickSort();
+            q.sort(lista);
+        } catch (Exception e) {
+            System.out.println("Error: " + e.toString());
+        }
+        return lista;
+    }
+
+    public static Integer[] generateInvertedArray(int n) {
+        Integer[] lista = new Integer[n];
+        Integer[] aux = new Integer[n];
+        Random ran;
+        try {
+            ran = new Random(12);
+            for (int i = 0; i < lista.length; i++) {
+                lista[i] = ran.nextInt(10000);
+            }
+            QuickSort q = new QuickSort();
+            q.sort(lista);
+            int a = lista.length - 1;
+            for (int i = 0; i < lista.length; i++) {
+                aux[i] = lista[a];
+                a--;
+            }
+        } catch (Exception e) {
+            System.out.println("Error: " + e.toString());
+        }
+        return aux;
+    }
+
 }
