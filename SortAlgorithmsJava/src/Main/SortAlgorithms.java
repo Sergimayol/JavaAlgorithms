@@ -30,8 +30,6 @@ public class SortAlgorithms {
         Integer arr[] = {1, 0, 1, 0, 1, 0, 0, 1};
         QuickSort q = new QuickSort();
         q.sort(arr);
-        arr = 
-        System.out.println(Arrays.toString(arr));
     }
 
     private void inicio() {
