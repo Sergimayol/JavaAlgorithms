@@ -19,7 +19,19 @@ public class SortAlgorithms {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        new SortAlgorithms().inicio();
+        //new SortAlgorithms().inicio();
+        new SortAlgorithms().binario();
+    }
+
+    private void binario() {
+//        Integer arr[] = {1, 0, 1, 0, 1, 0, 0, 1};
+        //Integer arr[] = {9, -3, 5, -2, -8, -6, 1, 3};
+        //Integer arr[] = {9, -3, 5, -2, -8, -6, 1};
+        Integer arr[] = {1, 0, 1, 0, 1, 0, 0, 1};
+        QuickSort q = new QuickSort();
+        q.sort(arr);
+        arr = 
+        System.out.println(Arrays.toString(arr));
     }
 
     private void inicio() {
