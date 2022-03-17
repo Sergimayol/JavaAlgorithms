@@ -5,8 +5,10 @@
  */
 package Main;
 
+import Utilities.LinkedList;
 import java.util.Arrays;
 import java.util.Random;
+import sortalgorithms.MergeSort;
 import sortalgorithms.QuickSort;
 
 /**
@@ -19,20 +21,22 @@ public class SortAlgorithms {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        //new SortAlgorithms().inicio();
-        new SortAlgorithms().binario();
+        //new SortAlgorithms().quick();
+        new SortAlgorithms().merge();
     }
 
-    private void binario() {
-//        Integer arr[] = {1, 0, 1, 0, 1, 0, 0, 1};
-        //Integer arr[] = {9, -3, 5, -2, -8, -6, 1, 3};
-        //Integer arr[] = {9, -3, 5, -2, -8, -6, 1};
-        Integer arr[] = {1, 0, 1, 0, 1, 0, 0, 1};
-        QuickSort q = new QuickSort();
-        q.sort(arr);
+    private void merge() {
+        LinkedList l = new LinkedList();
+        l.add(10);
+        l.add(5);
+        l.add(70);
+        l.add(80);
+        l.add(20);
+        System.out.println(l.toString());
+        l.s();
     }
 
-    private void inicio() {
+    private void quick() {
         int[] valores = new int[15];
         valores[0] = 10;
         valores[1] = 100;
