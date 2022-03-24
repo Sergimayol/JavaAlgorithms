@@ -22,7 +22,15 @@ public class SortAlgorithms {
      */
     public static void main(String[] args) {
         //new SortAlgorithms().quick();
-        new SortAlgorithms().merge();
+        //new SortAlgorithms().merge();
+        new SortAlgorithms().pruebas();
+    }
+
+    private void pruebas() {
+        QuickSort q = new QuickSort();
+        Integer[] l = generateInvertedArray(10);
+        q.sort(l);
+        System.out.println(Arrays.toString(l));
     }
 
     private void merge() {
