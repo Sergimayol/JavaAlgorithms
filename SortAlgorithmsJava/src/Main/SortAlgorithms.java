@@ -22,8 +22,8 @@ public class SortAlgorithms {
      */
     public static void main(String[] args) {
         //new SortAlgorithms().quick();
-        //new SortAlgorithms().merge();
-        new SortAlgorithms().pruebas();
+        new SortAlgorithms().merge();
+        //new SortAlgorithms().pruebas();
     }
 
     private void pruebas() {
@@ -40,8 +40,9 @@ public class SortAlgorithms {
         l.add(70);
         l.add(80);
         l.add(20);
-        System.out.println(l.toString());
-        l.s();
+        System.out.println(l.printList());
+        l.mergeSort();
+        System.out.println(l.printList());
     }
 
     private void quick() {
