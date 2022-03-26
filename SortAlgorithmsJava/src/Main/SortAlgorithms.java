@@ -36,10 +36,14 @@ public class SortAlgorithms {
         l.add(70);
         l.add(80);
         l.add(20);
-        System.out.println(l.printList());
+        System.out.println(l.printList() + " Length: " + l.getLength());
+        l.add(55);
+        System.out.println(l.printList() + " Length: " + l.getLength());
         l.mergeSort();
         //l.quickSort();
         System.out.println(l.printList());
+        Object[] a = l.toArray();
+        System.out.println(Arrays.toString(a));
     }
 
     private void quick() {
