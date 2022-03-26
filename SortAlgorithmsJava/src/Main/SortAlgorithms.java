@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package Main;
 
 import Utilities.LinkedList;
@@ -42,6 +37,7 @@ public class SortAlgorithms {
         l.add(20);
         System.out.println(l.printList());
         l.mergeSort();
+        //l.quickSort();
         System.out.println(l.printList());
     }
 
