@@ -1,5 +1,6 @@
 package Utilities;
 
+import java.util.Arrays;
 import java.util.Random;
 
 /**
@@ -18,6 +19,7 @@ public class Utilities {
             }
         } catch (Exception e) {
             System.out.println("Error: " + e.toString());
+            System.out.println(Arrays.toString(e.getStackTrace()));
         }
         return lista;
     }
@@ -32,8 +34,25 @@ public class Utilities {
             }
         } catch (Exception e) {
             System.out.println("Error: " + e.toString());
+            System.out.println(Arrays.toString(e.getStackTrace()));
         }
         return reverse;
     }
 
+    public static LinkedList generateRandomIntegerLinkedList(int length, int seed, int range_values) {
+        LinkedList list = null;
+        Random ran;
+        try {
+            ran = new Random(seed);
+            list = new LinkedList();
+            for (int i = 0; i < length; i++) {
+                list.add(ran.nextInt(range_values));
+            }
+        } catch (Exception e) {
+            System.out.println("Error: " + e.toString());
+            System.out.println(Arrays.toString(e.getStackTrace()));
+        }
+
+        return list;
+    }
 }
