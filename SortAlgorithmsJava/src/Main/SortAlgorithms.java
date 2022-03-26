@@ -1,6 +1,7 @@
 package Main;
 
 import Utilities.LinkedList;
+import Utilities.Utilities;
 import java.util.Arrays;
 import java.util.Random;
 import sortalgorithms.MergeSort;
@@ -76,7 +77,7 @@ public class SortAlgorithms {
         Integer[] l = null;
         switch (op) {
             case 0:
-                l = generateRandomArray(n);
+                l = (Integer[]) Utilities.generateRandomArray(n, 12, 1000);
                 break;
             case 1:
                 l = generateOrderedArray(n);
@@ -95,20 +96,6 @@ public class SortAlgorithms {
         long fin = System.currentTimeMillis();
 //        System.out.println(Arrays.toString(l));
         System.out.println("Length: " + n + "\nTiempo(ms): " + (fin - inicio));
-    }
-
-    public static Integer[] generateRandomArray(int n) {
-        Integer[] lista = new Integer[n];
-        Random ran;
-        try {
-            ran = new Random(12);
-            for (int i = 0; i < lista.length; i++) {
-                lista[i] = ran.nextInt(10000);
-            }
-        } catch (Exception e) {
-            System.out.println("Error: " + e.toString());
-        }
-        return lista;
     }
 
     public static Integer[] generateOrderedArray(int n) {
