@@ -18,15 +18,25 @@ public class SortAlgorithms {
      */
     public static void main(String[] args) {
         //new SortAlgorithms().quick();
-        new SortAlgorithms().merge();
-        //new SortAlgorithms().pruebas();
+        //new SortAlgorithms().merge();
+        new SortAlgorithms().pruebas();
     }
 
     private void pruebas() {
-        QuickSort q = new QuickSort();
-        Integer[] l = generateInvertedArray(10);
-        q.sort(l);
-        System.out.println(Arrays.toString(l));
+//        QuickSort q = new QuickSort();
+//        Integer[] l = generateInvertedArray(10);
+//        q.sort(l);
+//        System.out.println(Arrays.toString(l));
+        int[] valores = new int[6];
+        valores[0] = 10;
+        valores[1] = 100;
+        valores[2] = 1000;
+        valores[3] = 10000;
+        valores[4] = 100000;
+        valores[5] = 200000;
+        System.out.println(Arrays.toString(valores));
+        Utilities.shuffleArray(valores);
+        System.out.println(Arrays.toString(valores));
     }
 
     private void merge() {
