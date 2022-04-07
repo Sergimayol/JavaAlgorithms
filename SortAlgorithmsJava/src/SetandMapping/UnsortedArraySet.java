@@ -46,7 +46,7 @@ public class UnsortedArraySet<E> {
     // el darrer element ha de situar-se a la posició alliberada
     public boolean remove(E elem) {
         for (int i = 0; i < n && !isEmpty(); i++) {
-            if (this.array[i].equals(elem)) {
+            if (this.array[i] != null && this.array[i].equals(elem)) {
                 this.array[i] = null;
                 n--;
                 return true;

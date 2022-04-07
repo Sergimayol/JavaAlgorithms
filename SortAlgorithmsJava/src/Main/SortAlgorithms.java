@@ -30,11 +30,11 @@ public class SortAlgorithms {
         diesSetmana.add("Martes");
         diesSetmana.add("Miercoles");
         diesSetmana.add("Domingo");
-        diesSetmana.add("FFF");
-        //System.out.println(diesSetmana);
+        diesSetmana.add("Jueves");
         diesSetmana.remove("Lunes");
-        diesSetmana.add("EEE");
-        //System.out.println(diesSetmana);
+        diesSetmana.remove("Martes");
+        diesSetmana.add("Viernes");
+        System.out.println(diesSetmana);
         Iterator it = diesSetmana.iterator();
         while (it.hasNext()) {
             System.out.println(it.next());
