@@ -3,14 +3,14 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package sortalgorithms;
+package Sortalgorithms;
 
 import Utilities.SortInterface;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
-import static sortalgorithms.SortUtils.less;
-import static sortalgorithms.SortUtils.swap;
+import static Sortalgorithms.SortUtils.less;
+import static Sortalgorithms.SortUtils.swap;
 
 /**
  *

@@ -3,11 +3,11 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package sortalgorithms;
+package Sortalgorithms;
 
 import Utilities.SortInterface;
-import static sortalgorithms.SortUtils.greater;
-import static sortalgorithms.SortUtils.swap;
+import static Sortalgorithms.SortUtils.greater;
+import static Sortalgorithms.SortUtils.swap;
 
 /**
  *

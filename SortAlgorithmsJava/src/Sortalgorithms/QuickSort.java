@@ -3,10 +3,10 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package sortalgorithms;
+package Sortalgorithms;
 
 import Utilities.SortInterface;
-import static sortalgorithms.SortUtils.*;
+import static Sortalgorithms.SortUtils.*;
 
 /**
  *

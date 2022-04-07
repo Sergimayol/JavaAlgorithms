@@ -4,8 +4,10 @@ import Utilities.LinkedList;
 import Utilities.Utilities;
 import java.util.Arrays;
 import java.util.Random;
-import sortalgorithms.MergeSort;
-import sortalgorithms.QuickSort;
+import Sortalgorithms.MergeSort;
+import Sortalgorithms.QuickSort;
+import SetandMapping.UnsortedArraySet;
+import java.util.Iterator;
 
 /**
  *
@@ -18,15 +20,27 @@ public class SortAlgorithms {
      */
     public static void main(String[] args) {
         //new SortAlgorithms().quick();
-        new SortAlgorithms().merge();
-        //new SortAlgorithms().pruebas();
+        //new SortAlgorithms().merge();
+        new SortAlgorithms().pruebas();
     }
 
     private void pruebas() {
-        QuickSort q = new QuickSort();
-        Integer[] l = generateInvertedArray(10);
-        q.sort(l);
-        System.out.println(Arrays.toString(l));
+        UnsortedArraySet<String> diesSetmana = new UnsortedArraySet(5);
+        diesSetmana.add("Lunes");
+        diesSetmana.add("Martes");
+        diesSetmana.add("Miercoles");
+        diesSetmana.add("Domingo");
+        diesSetmana.add("FFF");
+        diesSetmana.add("EEE");
+        System.out.println(diesSetmana);
+        Iterator it = diesSetmana.iterator();
+        while (it.hasNext()) {
+            System.out.println(it.next());
+        }
+//        QuickSort q = new QuickSort();
+//        Integer[] l = generateInvertedArray(10);
+//        q.sort(l);
+//        System.out.println(Arrays.toString(l));
     }
 
     private void merge() {
