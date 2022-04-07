@@ -39,6 +39,12 @@ public class SortAlgorithms {
         while (it.hasNext()) {
             System.out.println(it.next());
         }
+        UnsortedArraySet<Character> c = new UnsortedArraySet(7);
+        for (int i = 0; i < 8; i++) {
+            Random random = new Random();
+            c.add((char) (random.nextInt(26) + 'a'));
+        }
+        System.out.println(c);
     }
 
     private void merge() {
