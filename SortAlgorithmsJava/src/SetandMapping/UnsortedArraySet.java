@@ -17,7 +17,7 @@ public class UnsortedArraySet<E> {
     // O(n): cerca lineal
     public boolean contains(E elem) {
         for (int i = 0; i < n && !isEmpty(); i++) {
-            if (this.array[i].equals(elem)) {
+            if (this.array[i] != null && this.array[i].equals(elem)) {
                 return true;
             }
         }
@@ -30,9 +30,9 @@ public class UnsortedArraySet<E> {
     public boolean add(E elem) {
         if (n < this.array.length) {
             int i = 0;
-            while (i < this.array.length && n < this.array.length) {
-                if (!contains(elem)) {
-                    this.array[n] = elem;
+            while (i < this.array.length) {
+                if (!contains(elem) && this.array[i] == null) {
+                    this.array[i] = elem;
                     n++;
                     return true;
                 }
