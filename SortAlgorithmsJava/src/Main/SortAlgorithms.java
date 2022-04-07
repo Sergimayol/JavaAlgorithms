@@ -4,8 +4,10 @@ import Utilities.LinkedList;
 import Utilities.Utilities;
 import java.util.Arrays;
 import java.util.Random;
-import sortalgorithms.MergeSort;
-import sortalgorithms.QuickSort;
+import Sortalgorithms.MergeSort;
+import Sortalgorithms.QuickSort;
+import SetandMapping.UnsortedArraySet;
+import java.util.Iterator;
 
 /**
  *
@@ -23,20 +25,22 @@ public class SortAlgorithms {
     }
 
     private void pruebas() {
+        UnsortedArraySet<String> diesSetmana = new UnsortedArraySet(5);
+        diesSetmana.add("Lunes");
+        diesSetmana.add("Martes");
+        diesSetmana.add("Miercoles");
+        diesSetmana.add("Domingo");
+        diesSetmana.add("FFF");
+        diesSetmana.add("EEE");
+        System.out.println(diesSetmana);
+        Iterator it = diesSetmana.iterator();
+        while (it.hasNext()) {
+            System.out.println(it.next());
+        }
 //        QuickSort q = new QuickSort();
 //        Integer[] l = generateInvertedArray(10);
 //        q.sort(l);
 //        System.out.println(Arrays.toString(l));
-        int[] valores = new int[6];
-        valores[0] = 10;
-        valores[1] = 100;
-        valores[2] = 1000;
-        valores[3] = 10000;
-        valores[4] = 100000;
-        valores[5] = 200000;
-        System.out.println(Arrays.toString(valores));
-        Utilities.shuffleArray(valores);
-        System.out.println(Arrays.toString(valores));
     }
 
     private void merge() {
