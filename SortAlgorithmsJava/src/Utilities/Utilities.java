@@ -52,7 +52,17 @@ public class Utilities {
             System.out.println("Error: " + e.toString());
             System.out.println(Arrays.toString(e.getStackTrace()));
         }
-
         return list;
+    }
+
+    public static int[] shuffleArray(int[] arr) {
+        Random rand = new Random();
+        for (int i = 0; i < arr.length; i++) {
+            int randomIndexToSwap = rand.nextInt(arr.length);
+            int temp = arr[randomIndexToSwap];
+            arr[randomIndexToSwap] = arr[i];
+            arr[i] = temp;
+        }
+        return arr;
     }
 }
