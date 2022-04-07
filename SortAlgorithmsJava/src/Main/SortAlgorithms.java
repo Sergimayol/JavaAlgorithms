@@ -31,18 +31,14 @@ public class SortAlgorithms {
         diesSetmana.add("Miercoles");
         diesSetmana.add("Domingo");
         diesSetmana.add("FFF");
-        System.out.println(diesSetmana);
+        //System.out.println(diesSetmana);
         diesSetmana.remove("Lunes");
         diesSetmana.add("EEE");
-        System.out.println(diesSetmana);
+        //System.out.println(diesSetmana);
         Iterator it = diesSetmana.iterator();
         while (it.hasNext()) {
             System.out.println(it.next());
         }
-//        QuickSort q = new QuickSort();
-//        Integer[] l = generateInvertedArray(10);
-//        q.sort(l);
-//        System.out.println(Arrays.toString(l));
     }
 
     private void merge() {
