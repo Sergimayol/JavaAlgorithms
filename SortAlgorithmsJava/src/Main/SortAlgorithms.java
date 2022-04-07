@@ -32,6 +32,7 @@ public class SortAlgorithms {
         diesSetmana.add("Domingo");
         diesSetmana.add("FFF");
         diesSetmana.add("EEE");
+        diesSetmana.remove("FFF");
         System.out.println(diesSetmana);
         Iterator it = diesSetmana.iterator();
         while (it.hasNext()) {
