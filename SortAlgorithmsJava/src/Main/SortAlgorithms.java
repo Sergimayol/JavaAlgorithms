@@ -62,8 +62,8 @@ public class SortAlgorithms {
         l.mergeSort();
         //l.quickSort();
         System.out.println(l.printList());
-        Object[] a = l.toArray();
-        System.out.println(Arrays.toString(a));
+        //Object[] a = l.toArray();
+        //System.out.println(Arrays.toString(a));
     }
 
     private void quick() {
