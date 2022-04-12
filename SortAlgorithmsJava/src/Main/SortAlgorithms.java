@@ -7,6 +7,7 @@ import java.util.Random;
 import Sortalgorithms.MergeSort;
 import Sortalgorithms.QuickSort;
 import SetandMapping.UnsortedArraySet;
+import java.util.ArrayList;
 import java.util.Iterator;
 
 /**
@@ -48,6 +49,7 @@ public class SortAlgorithms {
     }
 
     private void merge() {
+        ArrayList <Integer> a = new ArrayList();
         LinkedList l = new LinkedList();
         l.add(10);
         l.add(5);
