@@ -5,18 +5,18 @@
  */
 package Sortalgorithms;
 
-import Utilities.SortInterface;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import static Sortalgorithms.SortUtils.less;
 import static Sortalgorithms.SortUtils.swap;
+import Utilities.Sort;
 
 /**
  *
  * @author Sergi
  */
-public class HeapSort implements SortInterface {
+public class HeapSort implements Sort {
 
     private static class Heap<T extends Comparable<T>> {
 

@@ -1,12 +1,12 @@
 package Sortalgorithms;
 
-import Utilities.SortInterface;
+import Utilities.Sort;
 
 /**
  *
  * @author Sergi
  */
-public class MergeSort implements SortInterface {
+public class MergeSort implements Sort {
 
     /**
      * Generic merge sort algorithm implements.

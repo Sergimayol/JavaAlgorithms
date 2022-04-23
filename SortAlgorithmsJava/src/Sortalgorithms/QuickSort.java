@@ -1,13 +1,13 @@
 package Sortalgorithms;
 
-import Utilities.SortInterface;
 import static Sortalgorithms.SortUtils.*;
+import Utilities.Sort;
 
 /**
  *
  * @author Sergi
  */
-public class QuickSort implements SortInterface {
+public class QuickSort implements Sort {
 
     /**
      * This method implements the Generic Quick Sort

@@ -12,7 +12,7 @@ import java.util.List;
  *
  * @author Sergi
  */
-public interface SortInterface {
+public interface Sort {
 
     /**
      * Main method arrays sorting algorithms

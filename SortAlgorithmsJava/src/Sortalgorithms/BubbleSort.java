@@ -5,15 +5,15 @@
  */
 package Sortalgorithms;
 
-import Utilities.SortInterface;
 import static Sortalgorithms.SortUtils.greater;
 import static Sortalgorithms.SortUtils.swap;
+import Utilities.Sort;
 
 /**
  *
  * @author Sergi
  */
-public class BubbleSort implements SortInterface {
+public class BubbleSort implements Sort {
 
     @Override
     public <T extends Comparable<T>> T[] sort(T[] array) {

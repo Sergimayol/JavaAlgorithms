@@ -1,9 +1,10 @@
 package SetandMapping;
 
+import Utilities.Set;
 import java.util.Arrays;
 import java.util.Iterator;
 
-public class UnsortedArraySet<E> {
+public class UnsortedArraySet<E> implements Set<E> {
 
     private E[] array;
     private int n;
@@ -15,6 +16,7 @@ public class UnsortedArraySet<E> {
     }
 
     // O(n): cerca lineal
+    @Override
     public boolean contains(E elem) {
         for (int i = 0; i < n && !isEmpty(); i++) {
             if (this.array[i] != null && this.array[i].equals(elem)) {
@@ -27,6 +29,7 @@ public class UnsortedArraySet<E> {
     /* O(n): abans d’afegir, ha de comprovar que la clau no existeix dins el 
      * conjunt (cerca lineal)
      */
+    @Override
     public boolean add(E elem) {
         if (n < this.array.length) {
             int i = 0;
@@ -44,6 +47,7 @@ public class UnsortedArraySet<E> {
 
     // O(n): cal cercar la clau dins el conjunt (cerca lineal) i
     // el darrer element ha de situar-se a la posició alliberada
+    @Override
     public boolean remove(E elem) {
         for (int i = 0; i < n && !isEmpty(); i++) {
             if (this.array[i] != null && this.array[i].equals(elem)) {
@@ -56,10 +60,12 @@ public class UnsortedArraySet<E> {
     }
 
     // O(1)
+    @Override
     public boolean isEmpty() {
         return n == 0;
     }
 
+    @Override
     public Iterator iterator() {
         return new IteratorUnsortedArraySet();
     }
