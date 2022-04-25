@@ -8,6 +8,9 @@ import Utilities.Node;
  */
 public class QuickSortLinkedList {
 
+    /**
+     *
+     */
     public QuickSortLinkedList() {
     }
 
@@ -45,6 +48,11 @@ public class QuickSortLinkedList {
         return pivot_prev;
     }
 
+    /**
+     *
+     * @param start
+     * @param end
+     */
     public void sort(Node start, Node end) {
         if (start == null || start == end || start == end.getNext()) {
             return;

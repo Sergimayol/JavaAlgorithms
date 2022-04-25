@@ -122,6 +122,11 @@ public class SortAlgorithms {
         System.out.println("Length: " + n + "\nTiempo(ms): " + (fin - inicio));
     }
 
+    /**
+     *
+     * @param n
+     * @return
+     */
     public static Integer[] generateOrderedArray(int n) {
         Integer[] lista = new Integer[n];
         Random ran;
@@ -138,6 +143,11 @@ public class SortAlgorithms {
         return lista;
     }
 
+    /**
+     *
+     * @param n
+     * @return
+     */
     public static Integer[] generateInvertedArray(int n) {
         Integer[] lista = new Integer[n];
         Integer[] aux = new Integer[n];

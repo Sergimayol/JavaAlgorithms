@@ -9,6 +9,14 @@ import java.util.Random;
  */
 public class Utilities {
 
+    /**
+     * Generates an array with random numbers
+     *
+     * @param length
+     * @param seed
+     * @param range_values
+     * @return array filled with random numbers
+     */
     public static Object[] generateRandomArray(int length, int seed, int range_values) {
         Object[] lista = new Object[length];
         Random ran;
@@ -24,12 +32,18 @@ public class Utilities {
         return lista;
     }
 
-    public static Object[] reverseArray(Object[] l) {
-        Object[] reverse = new Object[l.length];
+    /**
+     * Reverses and array
+     *
+     * @param list
+     * @return reverse array
+     */
+    public static Object[] reverseArray(Object[] list) {
+        Object[] reverse = new Object[list.length];
         try {
-            int a = l.length - 1;
-            for (int i = 0; i < l.length; i++) {
-                reverse[i] = l[a];
+            int a = list.length - 1;
+            for (int i = 0; i < list.length; i++) {
+                reverse[i] = list[a];
                 a--;
             }
         } catch (Exception e) {
@@ -39,6 +53,14 @@ public class Utilities {
         return reverse;
     }
 
+    /**
+     * Generates a linkedlist with random numbers
+     *
+     * @param length
+     * @param seed
+     * @param range_values
+     * @return LinkedList filled with random numbers
+     */
     public static LinkedList generateRandomIntegerLinkedList(int length, int seed, int range_values) {
         LinkedList list = null;
         Random ran;
@@ -55,6 +77,12 @@ public class Utilities {
         return list;
     }
 
+    /**
+     * Shuffles an array
+     *
+     * @param arr
+     * @return shuffled array
+     */
     public static int[] shuffleArray(int[] arr) {
         Random rand = new Random();
         for (int i = 0; i < arr.length; i++) {

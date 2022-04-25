@@ -8,6 +8,9 @@ import Utilities.Node;
  */
 public class MergeSortLinkedList {
     
+    /**
+     *
+     */
     public MergeSortLinkedList() {
     }
 
@@ -23,6 +26,11 @@ public class MergeSortLinkedList {
         return node;
     }
 
+    /**
+     *
+     * @param h
+     * @return
+     */
     public Node mergeSort(Node h) {
         // Base case : if head is null
         if (h == null || h.getNext() == null) {

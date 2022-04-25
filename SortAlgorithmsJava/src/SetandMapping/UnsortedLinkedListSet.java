@@ -13,10 +13,18 @@ public class UnsortedLinkedListSet<E> implements Set<E> {
 
     private Node first;
 
+    /**
+     *
+     */
     public UnsortedLinkedListSet() {
         this.first = null;
     }
 
+    /**
+     *
+     * @param elem
+     * @return
+     */
     @Override
     public boolean contains(E elem) {
         Node p = first;
@@ -28,6 +36,11 @@ public class UnsortedLinkedListSet<E> implements Set<E> {
         return trobat;
     }
 
+    /**
+     *
+     * @param elem
+     * @return
+     */
     @Override
     public boolean add(E elem) {
         boolean trobat = contains(elem);
@@ -37,6 +50,11 @@ public class UnsortedLinkedListSet<E> implements Set<E> {
         return !trobat;
     }
 
+    /**
+     *
+     * @param elem
+     * @return
+     */
     @Override
     public boolean remove(E elem) {
         Node p = first;
@@ -59,11 +77,19 @@ public class UnsortedLinkedListSet<E> implements Set<E> {
         return trobat;
     }
 
+    /**
+     *
+     * @return
+     */
     @Override
     public boolean isEmpty() {
         return first == null;
     }
 
+    /**
+     *
+     * @return
+     */
     @Override
     public Iterator iterator() {
         return new IteratorUnsortedLinkedListSet();

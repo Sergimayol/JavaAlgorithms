@@ -33,10 +33,18 @@ public class UnsortedLinkedListMapping<K, V> implements Mapping<K, V> {
 
     private Node first;
 
+    /**
+     *
+     */
     public UnsortedLinkedListMapping() {
         this.first = null;
     }
 
+    /**
+     *
+     * @param key
+     * @return
+     */
     @Override
     public V get(K key) {
         Node p = first;
@@ -54,6 +62,12 @@ public class UnsortedLinkedListMapping<K, V> implements Mapping<K, V> {
         }
     }
 
+    /**
+     *
+     * @param key
+     * @param value
+     * @return
+     */
     @Override
     public V put(K key, V value) {
         Node p = first;
@@ -75,6 +89,11 @@ public class UnsortedLinkedListMapping<K, V> implements Mapping<K, V> {
         }
     }
 
+    /**
+     *
+     * @param key
+     * @return
+     */
     @Override
     public V remove(K key) {
         Node p = first;
@@ -100,11 +119,19 @@ public class UnsortedLinkedListMapping<K, V> implements Mapping<K, V> {
         }
     }
 
+    /**
+     *
+     * @return
+     */
     @Override
     public boolean isEmpty() {
         return false;
     }
 
+    /**
+     *
+     * @return
+     */
     @Override
     public Iterator iterator() {
         return new IteratorUnsortedLinkedListMapping();
