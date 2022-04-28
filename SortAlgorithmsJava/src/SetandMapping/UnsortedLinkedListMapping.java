@@ -7,7 +7,7 @@ package SetandMapping;
 
 import Utilities.Mapping;
 import java.util.Iterator;
-import javafx.util.Pair;
+import jdk.internal.net.http.common.Pair;
 
 /**
  *

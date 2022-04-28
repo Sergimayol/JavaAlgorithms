@@ -14,9 +14,8 @@ public class UnsortedArraySet<E> implements Set<E> {
     private E[] array;
     private int n;
 
-    // Reserva memòria per un array de longitud max i inicialitza n a 0
-
     /**
+     * Reserva memòria per un array de longitud max i inicialitza n a 0
      *
      * @param max
      */
@@ -25,9 +24,8 @@ public class UnsortedArraySet<E> implements Set<E> {
         this.n = 0;
     }
 
-    // O(n): cerca lineal
-
     /**
+     * O(n): cerca lineal
      *
      * @param elem
      * @return
@@ -42,16 +40,13 @@ public class UnsortedArraySet<E> implements Set<E> {
         return false;
     }
 
-    /* O(n): abans d’afegir, ha de comprovar que la clau no existeix dins el 
-     * conjunt (cerca lineal)
-     */
-
     /**
+     * O(n): abans d’afegir, ha de comprovar que la clau no existeix dins el
+     * conjunt (cerca lineal)
      *
      * @param elem
      * @return
      */
-
     @Override
     public boolean add(E elem) {
         if (n < this.array.length) {
@@ -68,10 +63,9 @@ public class UnsortedArraySet<E> implements Set<E> {
         return false;
     }
 
-    // O(n): cal cercar la clau dins el conjunt (cerca lineal) i
-    // el darrer element ha de situar-se a la posició alliberada
-
     /**
+     * O(n): cal cercar la clau dins el conjunt (cerca lineal) i el darrer
+     * element ha de situar-se a la posició alliberada
      *
      * @param elem
      * @return
@@ -88,9 +82,8 @@ public class UnsortedArraySet<E> implements Set<E> {
         return false;
     }
 
-    // O(1)
-
     /**
+     * O(1)
      *
      * @return
      */
