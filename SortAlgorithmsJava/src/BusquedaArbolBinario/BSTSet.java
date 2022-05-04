@@ -1,11 +1,15 @@
 package BusquedaArbolBinario;
 
+import Utilities.Set;
+import java.util.Iterator;
+import java.util.Stack;
+
 /**
  *
  * @author Sergi
  * @param <E>
  */
-public class BSTSet<E extends Comparable> {
+public class BSTSet<E extends Comparable> implements Set<E> {
 
     private class Node {
 
@@ -35,10 +39,12 @@ public class BSTSet<E extends Comparable> {
         this.root = null;
     }
 
-    boolean isEmpty() {
+    @Override
+    public boolean isEmpty() {
         return this.root == null;
     }
 
+    @Override
     public boolean contains(E elem) {
         return contains(elem, root);
     }
@@ -63,27 +69,104 @@ public class BSTSet<E extends Comparable> {
         }
     }
 
-    private Node add(E elem, Node current) {
+    private Node add(E elem, Node current, Cerca cerca) {
         if (current == null) {// Si l’arbre és buit: retornam un node nou
             return new Node(elem, null, null);
         } else {
             if (current.elem.equals(elem)) {// Si el node conté l’element
+                cerca.trobat = true;
                 return current; // retornam el node (sense modificar)
             }
             if (elem.compareTo(current.elem) < 0) {// Si l’element és inferior
                 // hem d’afegir al subarbre esquerre
-                current.left = add(elem, current.left);
+                current.left = add(elem, current.left, cerca);
             } else {
                 // hem d’afegir al subarbre dret
-                current.right = add(elem, current.right);
+                current.right = add(elem, current.right, cerca);
             }
             return current;
         }
     }
 
+    @Override
+    public boolean remove(E elem) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
     public boolean add(E elem) {
         Cerca cerca = new Cerca(false);
-        //this.root = add(elem, root, cerca);
+        this.root = add(elem, root, cerca);
         return !cerca.trobat;
+    }
+
+    private Node remove(E elem, Node current) {
+        if (current == null) { // Element no trobat
+            return null;
+        }
+        if (current.elem.equals(elem)) { // Element trobat
+            // Eliminar node
+            if (current.left == null && current.right == null) {
+                return null;
+            } else if (current.left == null && current.right != null) {
+                return current.right;
+            } else if (current.left != null && current.right == null) {
+                return current.left;
+            }
+        }
+        if (elem.compareTo(current.elem) < 0) { // Subarbre esquerra
+//            current.left = remove(elem, current.left, cerca);
+        } else {// Subarbre dret
+//            current.right = remove(elem, current.right, cerca);
+        }
+        return current;
+    }
+
+    @Override
+    public Iterator iterator() {
+        return new IteratorBSTSet();
+    }
+
+    private class IteratorBSTSet implements Iterator {
+
+        // La implementació de l’iterador serà
+        // una pila de nodes
+        private Stack<Node> iterator;
+
+        // Quin és el primer node a visitar
+        public IteratorBSTSet() {
+            Node p;
+            iterator = new Stack();
+            if (root != null) {
+                p = root;
+                while (p.left != null) {
+                    iterator.push(p);
+                    p = p.left;
+                }
+                iterator.push(p);
+            }
+        }
+
+        // Tenim més nodes per visitar?
+        @Override
+        public boolean hasNext() {
+            return !iterator.isEmpty();
+        }
+
+        // Quin és el següent node a visitar
+        @Override
+        public Object next() {
+            Node p = iterator.pop();
+            E elem = p.elem;
+            if (p.right != null) {
+                p = p.right;
+                while (p.left != null) {
+                    iterator.push(p);
+                    p = p.left;
+                }
+                iterator.push(p);
+            }
+            return elem;
+        }
     }
 }

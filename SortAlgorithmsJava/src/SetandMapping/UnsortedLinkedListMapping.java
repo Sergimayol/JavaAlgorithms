@@ -7,7 +7,7 @@ package SetandMapping;
 
 import Utilities.Mapping;
 import java.util.Iterator;
-import jdk.internal.net.http.common.Pair;
+//import jdk.internal.net.http.common.Pair;
 
 /**
  *
@@ -152,9 +152,10 @@ public class UnsortedLinkedListMapping<K, V> implements Mapping<K, V> {
 
         @Override
         public Object next() {
-            Pair p = new Pair(idxIterator.key, idxIterator.value);
-            idxIterator = idxIterator.next;
-            return p;
+//            Pair p = new Pair(idxIterator.key, idxIterator.value);
+//            idxIterator = idxIterator.next;
+//            return p;
+            return null;
         }
     }
 }
