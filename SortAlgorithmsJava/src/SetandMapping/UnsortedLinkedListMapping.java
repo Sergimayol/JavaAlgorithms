@@ -137,6 +137,34 @@ public class UnsortedLinkedListMapping<K, V> implements Mapping<K, V> {
         return new IteratorUnsortedLinkedListMapping();
     }
 
+    protected class Pair {
+
+        K key;
+        V value;
+
+        public Pair(K key, V value) {
+            this.key = key;
+            this.value = value;
+        }
+
+        public K getKey() {
+            return key;
+        }
+
+        public void setKey(K key) {
+            this.key = key;
+        }
+
+        public V getValue() {
+            return value;
+        }
+
+        public void setValue(V value) {
+            this.value = value;
+        }
+
+    }
+
     private class IteratorUnsortedLinkedListMapping implements Iterator {
 
         private Node idxIterator;
@@ -152,10 +180,9 @@ public class UnsortedLinkedListMapping<K, V> implements Mapping<K, V> {
 
         @Override
         public Object next() {
-//            Pair p = new Pair(idxIterator.key, idxIterator.value);
-//            idxIterator = idxIterator.next;
-//            return p;
-            return null;
+            Pair p = new Pair(idxIterator.key, idxIterator.value);
+            idxIterator = idxIterator.next;
+            return p;
         }
     }
 }

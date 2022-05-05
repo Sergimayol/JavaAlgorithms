@@ -90,7 +90,9 @@ public class BSTSet<E extends Comparable> implements Set<E> {
 
     @Override
     public boolean remove(E elem) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        Cerca cerca = new Cerca(false);
+        this.root = remove(elem, root, cerca);
+        return !cerca.trobat;
     }
 
     @Override
@@ -100,11 +102,12 @@ public class BSTSet<E extends Comparable> implements Set<E> {
         return !cerca.trobat;
     }
 
-    private Node remove(E elem, Node current) {
+    private Node remove(E elem, Node current, Cerca cerca) {
         if (current == null) { // Element no trobat
             return null;
         }
         if (current.elem.equals(elem)) { // Element trobat
+            cerca.trobat = true;
             // Eliminar node
             if (current.left == null && current.right == null) {
                 return null;
@@ -112,12 +115,25 @@ public class BSTSet<E extends Comparable> implements Set<E> {
                 return current.right;
             } else if (current.left != null && current.right == null) {
                 return current.left;
+            } else {
+                Node plowest = current.right;
+                Node parent = current;
+                while (plowest.left != null) {
+                    parent = plowest;
+                    plowest = plowest.left;
+                }
+                plowest.left = current.left;
+                if (plowest != current.right) {
+                    parent.left = plowest.right;
+                    plowest.right = current.right;
+                }
+                return plowest;
             }
         }
         if (elem.compareTo(current.elem) < 0) { // Subarbre esquerra
-//            current.left = remove(elem, current.left, cerca);
+            current.left = remove(elem, current.left, cerca);
         } else {// Subarbre dret
-//            current.right = remove(elem, current.right, cerca);
+            current.right = remove(elem, current.right, cerca);
         }
         return current;
     }
