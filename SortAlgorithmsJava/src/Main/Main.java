@@ -1,5 +1,6 @@
 package Main;
 
+import BusquedaArbolBinario.BSTMapping;
 import Utilities.LinkedList;
 import Utilities.Utilities;
 import java.util.Arrays;
@@ -14,7 +15,7 @@ import java.util.Iterator;
  *
  * @author Sergi
  */
-public class SortAlgorithms {
+public class Main {
 
     /**
      * @param args the command line arguments
@@ -22,7 +23,22 @@ public class SortAlgorithms {
     public static void main(String[] args) {
         //new SortAlgorithms().quick();
         //new SortAlgorithms().merge();
-        new SortAlgorithms().pruebas();
+        //new Main().pruebas();
+        new Main().test();
+    }
+
+    private void test() {
+        UnsortedArraySet<Character> conjuntoLetras = new UnsortedArraySet(7);
+        Random ran = new Random();
+        for (int i = 0; i < 7; i++) {
+            if (!conjuntoLetras.add((char) (ran.nextInt(26) + 'A'))) {
+                i--;
+            }
+        }
+        System.out.println(conjuntoLetras);
+        BSTMapping<String, Integer> mapping = new BSTMapping();
+        mapping.put("pal", 1);
+        System.out.println(mapping);
     }
 
     private void pruebas() {
@@ -49,7 +65,7 @@ public class SortAlgorithms {
     }
 
     private void merge() {
-        ArrayList <Integer> a = new ArrayList();
+        ArrayList<Integer> a = new ArrayList();
         LinkedList l = new LinkedList();
         l.add(10);
         l.add(5);

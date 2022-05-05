@@ -123,6 +123,11 @@ public class BSTMapping<K extends Comparable<K>, V> implements Mapping<K, V> {
         return new IteratorBSTMapping();
     }
 
+    @Override
+    public String toString() {
+        return "BSTMapping{" + "root=" + root + '}';
+    }
+
     private class Node {
 
         public K key;
@@ -134,6 +139,11 @@ public class BSTMapping<K extends Comparable<K>, V> implements Mapping<K, V> {
             this.value = value;
             this.left = left;
             this.right = right;
+        }
+
+        @Override
+        public String toString() {
+            return "Node{" + "key=" + key + ", value=" + value + ", left=" + left + ", right=" + right + '}';
         }
 
     }
