@@ -139,8 +139,8 @@ public class UnsortedLinkedListMapping<K, V> implements Mapping<K, V> {
 
     protected class Pair {
 
-        K key;
-        V value;
+        private K key;
+        private V value;
 
         public Pair(K key, V value) {
             this.key = key;

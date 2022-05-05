@@ -48,4 +48,5 @@ public interface Mapping<K, V> {
      * @return Iterator
      */
     public Iterator iterator();
+
 }
