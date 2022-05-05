@@ -36,9 +36,28 @@ public class Main {
             }
         }
         System.out.println(conjuntoLetras);
-        BSTMapping<String, Integer> mapping = new BSTMapping();
-        mapping.put("pal", 1);
-        System.out.println(mapping);
+//        BSTMapping<String, Integer> mapping = new BSTMapping();
+//        mapping.put("pal", 1);
+//        System.out.println(mapping);
+        Iterator it = conjuntoLetras.iterator();
+        ArrayList<Character> arr = new ArrayList<>();
+        while (it.hasNext()) {
+            arr.add((Character) it.next());
+        }
+        conjuntoLetras = new UnsortedArraySet(7);
+        System.out.println(conjuntoLetras);
+        System.out.println(arr);
+        Random rand = new Random();
+        for (int i = 0; i < arr.size(); i++) {
+            int randomIndexToSwap = rand.nextInt(arr.size());
+            Character temp = arr.get(randomIndexToSwap);
+            arr.set(randomIndexToSwap, arr.get(i));
+            arr.set(i, temp);
+        }
+        for (int i = 0; i < arr.size(); i++) {
+            conjuntoLetras.add(arr.get(i));
+        }
+        System.out.println(conjuntoLetras);
     }
 
     private void pruebas() {
