@@ -44,9 +44,8 @@ public class Main {
         while (it.hasNext()) {
             arr.add((Character) it.next());
         }
+        Character c = arr.remove(0);
         conjuntoLetras = new UnsortedArraySet(7);
-        System.out.println(conjuntoLetras);
-        System.out.println(arr);
         Random rand = new Random();
         for (int i = 0; i < arr.size(); i++) {
             int randomIndexToSwap = rand.nextInt(arr.size());
@@ -54,6 +53,7 @@ public class Main {
             arr.set(randomIndexToSwap, arr.get(i));
             arr.set(i, temp);
         }
+        conjuntoLetras.add(c);
         for (int i = 0; i < arr.size(); i++) {
             conjuntoLetras.add(arr.get(i));
         }
