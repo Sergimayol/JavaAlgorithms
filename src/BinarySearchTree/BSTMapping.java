@@ -1,4 +1,4 @@
-package BusquedaArbolBinario;
+package BinarySearchTree;
 
 import Utilities.Mapping;
 import java.util.Iterator;
