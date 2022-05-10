@@ -352,3 +352,6 @@ MigrationBackup/
 /SortAlgorithms/build/
 /SortAlgorithms/dist/
 /SortAlgorithmsJava/dist/
+/nbproject/private/
+/dist/
+/build/
