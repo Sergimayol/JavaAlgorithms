@@ -350,5 +350,6 @@ MigrationBackup/
 /nbproject/private/
 /dist/
 /build/
+/nbproject/
 *.xml
 *.mf
