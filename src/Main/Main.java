@@ -9,6 +9,7 @@ import Sortalgorithms.MergeSort;
 import Sortalgorithms.QuickSort;
 import SetandMapping.UnsortedArraySet;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Iterator;
 
 /**
@@ -21,10 +22,15 @@ public class Main {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        new Main().test();
+        //new Main().test();
+        new Main().test2();
     }
 
     private void test() {
+        String aux = "Hola";
+        String a = String.valueOf('a');
+        System.out.println(aux.contains(a));
+
         UnsortedArraySet<Character> conjuntoLetras = new UnsortedArraySet(7);
         Random ran = new Random();
         for (int i = 0; i < 7; i++) {
@@ -33,9 +39,16 @@ public class Main {
             }
         }
         System.out.println(conjuntoLetras);
-//        BSTMapping<String, Integer> mapping = new BSTMapping();
-//        mapping.put("pal", 1);
-//        System.out.println(mapping);
+        BSTMapping<String, Integer> mapping = new BSTMapping();
+        mapping.put("pal", 1);
+        mapping.put("ff", 3);
+        mapping.put("palss", 7);
+        System.out.println(mapping);
+        Iterator e = mapping.iterator();
+//        while (e.hasNext()) {
+//            mapping.get(a);
+//        }
+        System.out.println(mapping.get("ff"));
         Iterator it = conjuntoLetras.iterator();
         ArrayList<Character> arr = new ArrayList<>();
         while (it.hasNext()) {
@@ -80,4 +93,13 @@ public class Main {
         System.out.println(c);
     }
 
+    private void test2() {
+        ArrayList a = new ArrayList();
+        a.add("a");
+        a.add("cd");
+        a.add("b");
+        System.out.println(a);
+        Collections.sort(a);
+        System.out.println(a);
+    }
 }
