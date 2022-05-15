@@ -7,7 +7,7 @@ import java.util.Arrays;
  *
  * @author Sergi
  */
-public class MVA {
+public class MeanValueAnalysis {
 
     //Razones de visita
     private final int[] V;
@@ -26,7 +26,7 @@ public class MVA {
     //Número de trabajos en el sistema
     private ArrayList<Double> N_i;
 
-    public MVA(int[] v, double[] s) throws Exception {
+    public MeanValueAnalysis(int[] v, double[] s) throws Exception {
         this.V = v;
         this.S = s;
         if (this.S.length != this.V.length) {

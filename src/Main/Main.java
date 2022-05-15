@@ -1,5 +1,6 @@
 package Main;
 
+import Backtraking.NQueensUS;
 import BinarySearchTree.BSTMapping;
 import Utilities.LinkedList;
 import Utilities.Utilities;
@@ -23,7 +24,7 @@ public class Main {
      */
     public static void main(String[] args) {
         //new Main().test();
-        new Main().test2();
+        //new Main().test2();
     }
 
     private void test() {
@@ -102,4 +103,5 @@ public class Main {
         Collections.sort(a);
         System.out.println(a);
     }
+    
 }
