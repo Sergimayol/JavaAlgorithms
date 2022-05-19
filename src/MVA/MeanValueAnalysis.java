@@ -2,6 +2,7 @@ package MVA;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 
 /**
  *
@@ -107,9 +108,9 @@ public class MeanValueAnalysis {
         R_i();
         double R = R();
         System.out.println(R);
-        
+
         N_i();
-        
+
     }
 
     public int[] getV() {
@@ -156,4 +157,57 @@ public class MeanValueAnalysis {
                 + '}';
     }
 
+    public static void MVA(int N, int Z, int K, double[] Si, int[] Vi) {
+        int N = 3 + 1;
+        int Z = 5;
+        int K = 3;
+        double[] Si = {0.03, 0.5, 0.0};
+        int[] Vi = {15, 14, 0};
+       // MVA.MeanValueAnalysis(N, Z, K, Si, Vi);
+        
+        Double[] Ni = new Double[K];
+        Double[] Ri = new Double[K];
+        Double[] Xi = new Double[K];
+        double X0 = 0.0;
+        double[] Di = new double[K];
+        double D = 0;
+        double Dmax = -1;
+        List<Double> _list_X0 = new ArrayList<Double>();
+        List<Double> _list_R = new ArrayList<Double>();
+        for (int i = 0; i < K; i++) {
+            Di[i] = Si[i] * Vi[i];
+            D += Di[i];
+            if (Di[i] > Dmax) {
+                Dmax = Di[i];
+            }
+        }
+        for (int i = 0; i < K; i++) {
+            Ni[i] = 0.0;
+            Ri[i] = 0.0;
+        }
+        for (int n = 0; n < N; n++) {
+            for (int i = 0; i < K; i++) {
+                Ri[i] = Si[i] * (1 + Ni[i]);
+            }
+            double R = 0.0;
+            for (int i = 0; i < K; i++) {
+                R += Ri[i] * Vi[i];
+            }
+            _list_R.add(R);
+            X0 = (n / (R + Z));
+            _list_X0.add(X0);
+            for (int i = 0; i < K; i++) {
+                Ni[i] = (X0 * Vi[i] * Ri[i]);
+                Xi[i] = (X0 * Vi[i]);
+            }
+            System.out.println("Xi: " + Arrays.toString(Xi));
+            System.out.println("Ni: " + Arrays.toString(Ni));
+            System.out.println("Ri: " + Arrays.toString(Ri));
+            System.out.println("X0: " + X0);
+            System.out.println("_list_R: " + _list_R);
+            System.out.println("_list_X0: " + _list_X0);
+            System.out.println("R: " + R);
+        }
+
+    }
 }
