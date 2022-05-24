@@ -10,21 +10,21 @@ import java.util.List;
  */
 public class MeanValueAnalysis {
 
-    //Razones de visita
+    // Razones de visita
     private final int[] V;
-    //Tiempos de servicio
+    // Tiempos de servicio
     private final double[] S;
-    //Número de dispositivos
+    // Número de dispositivos
     private final int NUM_DISPOSITIVOS;
-    //Tiempos de respuesta de cada dispositivo
+    // Tiempos de respuesta de cada dispositivo
     private ArrayList<Double> R_i;
-    //Utilización de cada dispositivo
+    // Utilización de cada dispositivo
     private ArrayList<Double> U_i;
-    //Probabilidades de encaminamiento
+    // Probabilidades de encaminamiento
     private ArrayList<Double> probs;
-    //Productividad de los dispositivos
+    // Productividad de los dispositivos
     private ArrayList<Double> X_i;
-    //Número de trabajos en el sistema
+    // Número de trabajos en el sistema
     private ArrayList<Double> N_i;
 
     public MeanValueAnalysis(int[] v, double[] s) throws Exception {
@@ -34,6 +34,17 @@ public class MeanValueAnalysis {
             throw new Exception();
         }
         this.NUM_DISPOSITIVOS = v.length;
+        this.R_i = new ArrayList();
+        this.U_i = new ArrayList();
+        this.probs = new ArrayList();
+        this.X_i = new ArrayList();
+        this.N_i = new ArrayList();
+    }
+
+    public MeanValueAnalysis() {
+        this.V = null;
+        this.S = null;
+        this.NUM_DISPOSITIVOS = 0;
         this.R_i = new ArrayList();
         this.U_i = new ArrayList();
         this.probs = new ArrayList();
@@ -157,14 +168,7 @@ public class MeanValueAnalysis {
                 + '}';
     }
 
-    public static void MVA(int N, int Z, int K, double[] Si, int[] Vi) {
-        int N = 3 + 1;
-        int Z = 5;
-        int K = 3;
-        double[] Si = {0.03, 0.5, 0.0};
-        int[] Vi = {15, 14, 0};
-       // MVA.MeanValueAnalysis(N, Z, K, Si, Vi);
-        
+    public void MVA(int N, int Z, int K, double[] Si, int[] Vi) {
         Double[] Ni = new Double[K];
         Double[] Ri = new Double[K];
         Double[] Xi = new Double[K];
@@ -208,6 +212,5 @@ public class MeanValueAnalysis {
             System.out.println("_list_X0: " + _list_X0);
             System.out.println("R: " + R);
         }
-
     }
 }
