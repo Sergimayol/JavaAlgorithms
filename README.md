@@ -13,19 +13,31 @@ This repository is made for helping building your own implementation of the algo
 ```
 src
 ├── Backtraking
-│   ├── Fibonacci.java
 │   ├── KnightsTour.java
 │   ├── NQueensMS.java
 │   └── NQueensUS.java
 ├── BinarySearchTree
 │   ├── BSTMapping.java
 │   └── BSTSet.java
+├── Conversions
+│   ├── BinaryString.java
+│   └── RomanInteger.java
+├── DataStructures
+│   ├── LinkedList.java
+│   ├── ListaConArrayList.java
+│   ├── ListaNodos.java
+│   ├── MatrixNxM.java
+│   ├── Node.java
+│   ├── Pila.java
+│   └── PilaConArrayList.java
 ├── DynamicProgramming
 │   └── Fibonacci.java
 ├── MVA
 │   └── MeanValueAnalysis.java
 ├── Main
 │   └── Main.java
+├── Recursion
+│   └── Fibonacci.java
 ├── SetandMapping
 │   ├── ArrayMapping.java
 │   ├── UnsortedArrayMapping.java
@@ -44,9 +56,8 @@ src
 │   ├── RadixSort.java
 │   └── SortUtils.java
 └── Utilities
-    ├── LinkedList.java
+    ├── Comparator.java
     ├── Mapping.java
-    ├── Node.java
     ├── Set.java
     ├── Sort.java
     └── Utilities.java
