@@ -37,31 +37,34 @@ public class Main {
     }
 
     private void test1() {
+        System.out.println("--------- TEST 1 ---------");
         int N = 3 + 1;
         int Z = 5;
-        int K = 3;
-        double[] Si = {0.03, 0.5, 0.0};
-        int[] Vi = {15, 14, 0};
+        int K = 2;
+        double[] Si = {0.03, 0.5};
+        int[] Vi = {15, 14};
         MeanValueAnalysis mva = new MeanValueAnalysis();
         mva.MVA(N, Z, K, Si, Vi);
     }
 
     private void test2() {
+        System.out.println("\n\n\n--------- TEST 2 ---------");
         int N = 3 + 1;
         int Z = 5;
         int K = 3;
-        double[] Si = {0.02, 0.04, 0.1};
-        int[] Vi = {11, 8, 2};
+        double[] Si = {0.03, 0.04, 0.04};
+        int[] Vi = {17, 6, 10};
         MeanValueAnalysis mva = new MeanValueAnalysis();
         mva.MVA(N, Z, K, Si, Vi);
     }
 
     private void test3() {
+        System.out.println("\n\n\n--------- TEST 3 ---------");
         int N = 3 + 1;
         int Z = 5;
         int K = 3;
-        double[] Si = {0.03, 0.5, 0.0};
-        int[] Vi = {15, 14, 0};
+        double[] Si = {0.02, 0.04, 0.1};
+        int[] Vi = {11, 8, 2};
         MeanValueAnalysis mva = new MeanValueAnalysis();
         mva.MVA(N, Z, K, Si, Vi);
     }

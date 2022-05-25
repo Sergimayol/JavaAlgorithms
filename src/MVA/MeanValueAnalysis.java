@@ -72,14 +72,18 @@ public class MeanValueAnalysis {
                 Ui[i] = (X0 * Vi[i] * Si[i]);
                 Xi[i] = (X0 * Vi[i]);
             }
-            System.out.println("Xi: " + Arrays.toString(Xi));
-            System.out.println("Ni: " + Arrays.toString(Ni));
-            System.out.println("Ri: " + Arrays.toString(Ri));
-            System.out.println("Ui: " + Arrays.toString(Ui));
-            System.out.println("X0: " + X0);
-            System.out.println("_list_R: " + _list_R);
-            System.out.println("_list_X0: " + _list_X0);
-            System.out.println("R: " + R);
+            if (n != 0) {
+                System.out.println("Trabajo: " + n);
+                System.out.println("Xi: " + Arrays.toString(Xi));
+                System.out.println("Ni: " + Arrays.toString(Ni));
+                System.out.println("Ri: " + Arrays.toString(Ri));
+                System.out.println("Ui: " + Arrays.toString(Ui));
+                System.out.println("X0: " + X0);
+//                System.out.println("_list_R: " + _list_R);
+//                System.out.println("_list_X0: " + _list_X0);
+                System.out.println("R: " + R);
+                System.out.println("");
+            }
         }
     }
 }
