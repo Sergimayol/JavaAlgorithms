@@ -1,11 +1,11 @@
 package DataStructures;
 
-public class Pila <T> {
+public class Stack <T> {
     private final int TAMAÑO;
     private T [] elementos;
     private int indiceUltimoElemento;
 
-    public Pila(int s) {
+    public Stack(int s) {
         TAMAÑO = s > 0 ? s : 10;
         elementos = (T []) new Object[TAMAÑO];
         indiceUltimoElemento = -1; // pila vacia, índice del elemento de arriba LIFO 

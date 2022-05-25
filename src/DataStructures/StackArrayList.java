@@ -3,11 +3,11 @@ package DataStructures;
 
 import java.util.ArrayList;
 
-public class PilaConArrayList <T> {
+public class StackArrayList <T> {
     Exception PilaVacia;
     private final ArrayList <T> pila;
  
-    public PilaConArrayList() {
+    public StackArrayList() {
             pila = new ArrayList <T> ();
     }
 

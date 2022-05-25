@@ -2,11 +2,11 @@ package DataStructures;
 
 import java.util.ArrayList;
 
-public class ListaConArrayList<T> {
+public class ListWithArrayList<T> {
 
     private ArrayList<T> lista;
 
-    public ListaConArrayList() {
+    public ListWithArrayList() {
         lista = new ArrayList<T>();
     }
 

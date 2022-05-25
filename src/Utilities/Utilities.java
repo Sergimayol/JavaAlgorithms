@@ -1,6 +1,6 @@
 package Utilities;
 
-import DataStructures.LinkedList;
+import DataStructures.SimpleLinkedList;
 import java.util.Arrays;
 import java.util.Random;
 
@@ -62,12 +62,12 @@ public class Utilities {
      * @param range_values
      * @return LinkedList filled with random numbers
      */
-    public static LinkedList generateRandomIntegerLinkedList(int length, int seed, int range_values) {
-        LinkedList list = null;
+    public static SimpleLinkedList generateRandomIntegerLinkedList(int length, int seed, int range_values) {
+        SimpleLinkedList list = null;
         Random ran;
         try {
             ran = new Random(seed);
-            list = new LinkedList();
+            list = new SimpleLinkedList();
             for (int i = 0; i < length; i++) {
                 list.add(ran.nextInt(range_values));
             }

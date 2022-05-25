@@ -10,8 +10,6 @@ public class MatrixNxM implements java.io.Serializable {
     private int dimension1, dimension2;
     private double[][] elementos;
 
-    // MÉTODOS
-    // MÉTODOS CONSTRUCTORES 
     public MatrixNxM(int dim1, int dim2) {
         dimension1 = dim1;
         dimension2 = dim2;

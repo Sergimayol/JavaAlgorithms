@@ -24,12 +24,12 @@ src
 │   └── RomanInteger.java
 ├── DataStructures
 │   ├── LinkedList.java
-│   ├── ListaConArrayList.java
-│   ├── ListaNodos.java
+│   ├── ListWithArrayList.java
 │   ├── MatrixNxM.java
 │   ├── Node.java
-│   ├── Pila.java
-│   └── PilaConArrayList.java
+│   ├── SimpleLinkedList.java
+│   ├── Stack.java
+│   └── StackArrayList.java
 ├── DynamicProgramming
 │   └── Fibonacci.java
 ├── MVA

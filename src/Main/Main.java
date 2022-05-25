@@ -3,7 +3,7 @@ package Main;
 import DynamicProgramming.Fibonacci;
 import Backtraking.NQueensUS;
 import BinarySearchTree.BSTMapping;
-import DataStructures.LinkedList;
+import DataStructures.SimpleLinkedList;
 import Utilities.Utilities;
 import java.util.Arrays;
 import java.util.Random;
