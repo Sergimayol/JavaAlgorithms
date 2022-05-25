@@ -1,4 +1,4 @@
-package Utilities;
+package DataStructures;
 
 import SortAlgorithmsLinkedList.*;
 

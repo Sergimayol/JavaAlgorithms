@@ -1,6 +1,6 @@
 package SortAlgorithmsLinkedList;
 
-import Utilities.Node;
+import DataStructures.Node;
 
 /**
  *

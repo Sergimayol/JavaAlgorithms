@@ -3,7 +3,7 @@ package Main;
 import DynamicProgramming.Fibonacci;
 import Backtraking.NQueensUS;
 import BinarySearchTree.BSTMapping;
-import Utilities.LinkedList;
+import DataStructures.LinkedList;
 import Utilities.Utilities;
 import java.util.Arrays;
 import java.util.Random;
@@ -28,8 +28,8 @@ public class Main {
      */
     public static void main(String[] args) {
         try {
-            // new Main().test();
-            new Main().test1();
+             new Main().test();
+//            new Main().testF();
         } catch (Exception ex) {
             Logger.getLogger(Main.class.getName()).log(Level.SEVERE, null, ex);
         }
@@ -45,7 +45,7 @@ public class Main {
         mva.MVA(N, Z, K, Si, Vi);
     }
 
-    private void test1() throws Exception {
+    private void testF() throws Exception {
         Fibonacci f = new Fibonacci(10);
         System.out.println(Arrays.toString(f.getSequence()));
     }

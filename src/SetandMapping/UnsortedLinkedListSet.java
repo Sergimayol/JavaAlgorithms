@@ -1,6 +1,6 @@
 package SetandMapping;
 
-import Utilities.Node;
+import DataStructures.Node;
 import Utilities.Set;
 import java.util.Iterator;
 
