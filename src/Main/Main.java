@@ -28,8 +28,8 @@ public class Main {
      */
     public static void main(String[] args) {
         try {
-            new Main().test1();
-            new Main().test2();
+            //new Main().test1();
+            //new Main().test2();
             new Main().test3();
         } catch (Exception ex) {
             Logger.getLogger(Main.class.getName()).log(Level.SEVERE, null, ex);
@@ -49,22 +49,22 @@ public class Main {
 
     private void test2() {
         System.out.println("\n\n\n--------- TEST 2 ---------");
-        int N = 3 + 1;
+        int N = 10 + 1;
         int Z = 5;
-        int K = 3;
-        double[] Si = {0.03, 0.04, 0.04};
-        int[] Vi = {17, 6, 10};
+        int K = 2;
+        double[] Si = {0.03, 0.1};
+        int[] Vi = {8, 7};
         MeanValueAnalysis mva = new MeanValueAnalysis();
         mva.MVA(N, Z, K, Si, Vi);
     }
 
     private void test3() {
         System.out.println("\n\n\n--------- TEST 3 ---------");
-        int N = 3 + 1;
-        int Z = 5;
-        int K = 3;
-        double[] Si = {0.02, 0.04, 0.1};
-        int[] Vi = {11, 8, 2};
+        int N = 5 + 1;
+        int Z = 2;
+        int K = 2;
+        double[] Si = {0.1, 0.2};
+        int[] Vi = {8, 7};
         MeanValueAnalysis mva = new MeanValueAnalysis();
         mva.MVA(N, Z, K, Si, Vi);
     }
