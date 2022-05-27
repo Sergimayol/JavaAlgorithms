@@ -29,8 +29,8 @@ public class Main {
     public static void main(String[] args) {
         try {
             //new Main().test1();
-            //new Main().test2();
-            new Main().test3();
+            new Main().test2();
+            //new Main().test3();
         } catch (Exception ex) {
             Logger.getLogger(Main.class.getName()).log(Level.SEVERE, null, ex);
         }
@@ -50,7 +50,7 @@ public class Main {
     private void test2() {
         System.out.println("\n\n\n--------- TEST 2 ---------");
         int N = 10 + 1;
-        int Z = 5;
+        int Z = 8;
         int K = 2;
         double[] Si = {0.03, 0.1};
         int[] Vi = {8, 7};

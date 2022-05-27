@@ -46,8 +46,6 @@ public class MeanValueAnalysis {
         double X0 = 0.0;
         double[] Di = new double[K];
         double D = 0;
-        List<Double> _list_X0 = new ArrayList<Double>();
-        List<Double> _list_R = new ArrayList<Double>();
         for (int i = 0; i < K; i++) {
             Di[i] = Si[i] * Vi[i];
             D += Di[i];
@@ -64,9 +62,7 @@ public class MeanValueAnalysis {
             for (int i = 0; i < K; i++) {
                 R += Ri[i] * Vi[i];
             }
-            _list_R.add(R);
             X0 = (n / (R + Z));
-            _list_X0.add(X0);
             for (int i = 0; i < K; i++) {
                 Ni[i] = (X0 * Vi[i] * Ri[i]);
                 Ui[i] = (X0 * Vi[i] * Si[i]);
@@ -79,8 +75,6 @@ public class MeanValueAnalysis {
                 System.out.println("Ri: " + Arrays.toString(Ri));
                 System.out.println("Ui: " + Arrays.toString(Ui));
                 System.out.println("X0: " + X0);
-//                System.out.println("_list_R: " + _list_R);
-//                System.out.println("_list_X0: " + _list_X0);
                 System.out.println("R: " + R);
                 System.out.println("");
             }
