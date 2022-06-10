@@ -14,7 +14,7 @@ public class UnsortedLinkedListSet<E> implements Set<E> {
     private Node first;
 
     /**
-     *
+     * Constructor
      */
     public UnsortedLinkedListSet() {
         this.first = null;

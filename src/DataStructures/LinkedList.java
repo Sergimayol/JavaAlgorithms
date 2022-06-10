@@ -14,7 +14,9 @@ public class LinkedList {
     //Apuntador al primer elemento de la lista
     private Nodo primero, libres;
 
-    //Constructor
+    /**
+     * Constructor
+     */
     public LinkedList() {
         primero = null;
         libres = null;
@@ -38,6 +40,10 @@ public class LinkedList {
     }
 
     //Método para insertar un nuevo nodo a la lista
+    /**
+     *
+     * @param cadena
+     */
     @SuppressWarnings("empty-statement")
     public void incluirNodo(int cadena) {
         Nodo elemento;
@@ -69,6 +75,10 @@ public class LinkedList {
     }
 
     //Eliminación del nodo y adicion al final de la lista con el campo INFO pasado por parámetro
+    /**
+     *
+     * @param dato
+     */
     public void eliminarNodo(int dato) {
         //Lista de Fems
         LinkedList listAux;
@@ -100,6 +110,10 @@ public class LinkedList {
         primero = listAux.getPrimero();
     }
 
+    /**
+     *
+     * @param valor
+     */
     public void insertarNodoFinal(int valor) {
         // Define un nuevo nodo.
         Nodo nuevo = new Nodo(valor);
@@ -122,6 +136,11 @@ public class LinkedList {
     }
 
     //Inserta un nodo en la lista en la primera posición
+    /**
+     *
+     * @param dato1
+     * @param dato2
+     */
     public void insertarNodoInicio(int dato1, int dato2) {
         boolean existe = false;
         Nodo aux, nuevoNodo = new Nodo(dato1);
@@ -226,7 +245,9 @@ public class LinkedList {
         }
     }
 
-    //Imprime todos los campos info de los nodos
+    /**
+     * Prints all node info
+     */
     public void getLista() {
         Nodo aux;
         for (aux = primero; aux != null; aux = aux.getSiguienteNodo()) {
@@ -234,27 +255,47 @@ public class LinkedList {
         }
     }
 
-    //Devuelve el nodo apuntador
+    /**
+     * Devuelve el nodo apuntador
+     *
+     * @return node
+     */
     public Nodo getPrimero() {
         return primero;
     }
 
-    //Asigna el puntero nodo 
+    /**
+     * Asigna el puntero nodo
+     *
+     * @param primero
+     */
     public void setPrimero(Nodo primero) {
         this.primero = primero;
     }
 
-    //Devuelve la lista de nodos
+    /**
+     * Devuelve la lista de nodos
+     *
+     * @return string
+     */
     @Override
     public String toString() {
         return "Lista{" + "primero = " + primero + '}';
     }
 
+    /**
+     *
+     * @return
+     */
     public String libres() {
         return "Lista basura = " + libres;
     }
 
-    //Devuelve la longitud de la lista
+    /**
+     * Devuelve la longitud de la lista
+     *
+     * @return list length
+     */
     public int getLongitudLista() {
         Nodo aux;
         int cont = 0;
@@ -264,7 +305,11 @@ public class LinkedList {
         return cont;
     }
 
-    //Devuelve un array con cada nodo de la lista
+    /**
+     * Devuelve un array con cada nodo de la lista
+     *
+     * @return array
+     */
     public Nodo[] getArrayListaNodos() {
         Nodo aux;
         int indice = 0;

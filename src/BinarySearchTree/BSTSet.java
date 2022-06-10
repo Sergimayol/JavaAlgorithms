@@ -35,15 +35,27 @@ public class BSTSet<E extends Comparable> implements Set<E> {
 
     }
 
+    /**
+     * Constructor
+     */
     public BSTSet() {
         this.root = null;
     }
 
+    /**
+     *
+     * @return
+     */
     @Override
     public boolean isEmpty() {
         return this.root == null;
     }
 
+    /**
+     *
+     * @param elem
+     * @return
+     */
     @Override
     public boolean contains(E elem) {
         return contains(elem, root);
@@ -88,6 +100,11 @@ public class BSTSet<E extends Comparable> implements Set<E> {
         }
     }
 
+    /**
+     *
+     * @param elem
+     * @return
+     */
     @Override
     public boolean remove(E elem) {
         Cerca cerca = new Cerca(false);
@@ -95,6 +112,11 @@ public class BSTSet<E extends Comparable> implements Set<E> {
         return !cerca.trobat;
     }
 
+    /**
+     *
+     * @param elem
+     * @return
+     */
     @Override
     public boolean add(E elem) {
         Cerca cerca = new Cerca(false);
@@ -138,6 +160,10 @@ public class BSTSet<E extends Comparable> implements Set<E> {
         return current;
     }
 
+    /**
+     *
+     * @return BST iterator
+     */
     @Override
     public Iterator iterator() {
         return new IteratorBSTSet();

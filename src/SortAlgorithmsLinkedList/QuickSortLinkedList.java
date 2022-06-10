@@ -9,7 +9,7 @@ import DataStructures.Node;
 public class QuickSortLinkedList {
 
     /**
-     *
+     * Constructor
      */
     public QuickSortLinkedList() {
     }

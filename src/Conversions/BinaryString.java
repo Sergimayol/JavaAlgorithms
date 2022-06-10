@@ -6,6 +6,11 @@ package Conversions;
  */
 public class BinaryString {
 
+    /**
+     *
+     * @param originalText
+     * @return
+     */
     public String textToBinary(String originalText) {
         String binaryText = "";
         for (int i = 0; i < originalText.length(); i++) {
@@ -22,6 +27,11 @@ public class BinaryString {
         return binaryText;
     }
 
+    /**
+     *
+     * @param binaryText
+     * @return
+     */
     public String binaryToText(String binaryText) {
         // Necesitamos separar cada número binario por espacio. Usamos split
         String[] binaryNumbers = binaryText.split(" ");

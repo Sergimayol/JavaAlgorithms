@@ -7,9 +7,9 @@ import DataStructures.Node;
  * @author Sergi
  */
 public class MergeSortLinkedList {
-    
+
     /**
-     *
+     * Constructor
      */
     public MergeSortLinkedList() {
     }

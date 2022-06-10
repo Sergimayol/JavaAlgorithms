@@ -8,6 +8,11 @@ public class Fibonacci {
 
     private final int result;
 
+    /**
+     *
+     * @param max
+     * @throws Exception
+     */
     public Fibonacci(int max) throws Exception {
         if (max < 0) {
             throw new Exception("Cannot be negative values");
@@ -27,6 +32,10 @@ public class Fibonacci {
         return fib(n - 1) + fib(n - 2);
     }
 
+    /**
+     *
+     * @return
+     */
     public int getResult() {
         return result;
     }

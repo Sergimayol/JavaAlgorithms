@@ -6,15 +6,26 @@ package Conversions;
 
 import Utilities.Comparator;
 
+/**
+ *
+ * @author Sergi
+ */
 public class RomanInteger implements Comparator {
 
     private static final char[] SIMBOLOS = "IVXLCDMWY ".toCharArray();
     private String numRomano;
     private int valor;
 
+    /**
+     * Constructor
+     */
     public RomanInteger() {
     }
 
+    /**
+     *
+     * @param numero
+     */
     public RomanInteger(int numero) {
         try {
             if (numero < 0 || numero > 39999) {
@@ -28,6 +39,10 @@ public class RomanInteger implements Comparator {
         }
     }
 
+    /**
+     *
+     * @param cifra
+     */
     public RomanInteger(String cifra) {
         try {
             if (cifraCorrecta(cifra)) {
@@ -42,6 +57,10 @@ public class RomanInteger implements Comparator {
 
     }
 
+    /**
+     *
+     * @return
+     */
     @Override
     public String toString() {
         return numRomano;
@@ -168,6 +187,12 @@ public class RomanInteger implements Comparator {
     // -1 IF THE RomanCipher IS LESS THAN THE ONE GIVEN BY PARAMETER
     // 0 IF THE Roman Numeral IS THE SAME AS THE ONE GIVEN BY PARAMETER
     // 1 IF THE Roman Cipher IS GREATER THAN THE ONE GIVEN BY PARAMETER
+
+    /**
+     *
+     * @param cifraRomanaB
+     * @return
+     */
     @Override
     public int compara(Comparator cifraRomanaB) {
         if (valor < ((RomanInteger) cifraRomanaB).valor) {
@@ -181,6 +206,12 @@ public class RomanInteger implements Comparator {
 
     //METHOD THAT RETURNS true IF THE Roman Digit IS LESS THAN THE ONE GIVEN BY 
     //PARAMETER
+
+    /**
+     *
+     * @param cifraRomanaB
+     * @return
+     */
     @Override
     public boolean menorQue(Comparator cifraRomanaB) {
         return valor < ((RomanInteger) cifraRomanaB).valor;

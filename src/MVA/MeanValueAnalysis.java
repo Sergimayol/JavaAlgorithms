@@ -27,6 +27,9 @@ public class MeanValueAnalysis {
     // Número de trabajos en el sistema
     private ArrayList<Double> N_i;
 
+    /**
+     * Constructor
+     */
     public MeanValueAnalysis() {
         this.V = null;
         this.S = null;
@@ -38,6 +41,14 @@ public class MeanValueAnalysis {
         this.N_i = new ArrayList();
     }
 
+    /**
+     *
+     * @param N
+     * @param Z
+     * @param K
+     * @param Si
+     * @param Vi
+     */
     public void MVA(int N, int Z, int K, double[] Si, int[] Vi) {
         Double[] Ni = new Double[K];
         Double[] Ri = new Double[K];

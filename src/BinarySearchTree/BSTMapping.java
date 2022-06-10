@@ -14,10 +14,18 @@ public class BSTMapping<K extends Comparable<K>, V> implements Mapping<K, V> {
 
     private Node root;
 
+    /**
+     * Constructor
+     */
     public BSTMapping() {
         this.root = null;
     }
 
+    /**
+     *
+     * @param key
+     * @return
+     */
     @Override
     public V get(K key) {
         return get(key, root); // Es como el contains del set
@@ -43,6 +51,12 @@ public class BSTMapping<K extends Comparable<K>, V> implements Mapping<K, V> {
         }
     }
 
+    /**
+     *
+     * @param key
+     * @param value
+     * @return
+     */
     @Override
     public V put(K key, V value) {
         Cerca cerca = new Cerca(null);
@@ -70,6 +84,11 @@ public class BSTMapping<K extends Comparable<K>, V> implements Mapping<K, V> {
         }
     }
 
+    /**
+     *
+     * @param key
+     * @return
+     */
     @Override
     public V remove(K key) {
         Cerca cerca = new Cerca(null);
@@ -113,16 +132,28 @@ public class BSTMapping<K extends Comparable<K>, V> implements Mapping<K, V> {
         return current;
     }
 
+    /**
+     *
+     * @return
+     */
     @Override
     public boolean isEmpty() {
         return this.root == null;
     }
 
+    /**
+     *
+     * @return
+     */
     @Override
     public Iterator iterator() {
         return new IteratorBSTMapping();
     }
 
+    /**
+     *
+     * @return
+     */
     @Override
     public String toString() {
         return "BSTMapping{" + "root=" + root + '}';
@@ -158,20 +189,36 @@ public class BSTMapping<K extends Comparable<K>, V> implements Mapping<K, V> {
 
     }
 
+    /**
+     * Pair of values (key, value)
+     */
     protected class Pair {
 
         private K key;
         private V value;
 
+        /**
+         *
+         * @param key
+         * @param value
+         */
         public Pair(K key, V value) {
             this.key = key;
             this.value = value;
         }
 
+        /**
+         *
+         * @return
+         */
         public K getKey() {
             return key;
         }
 
+        /**
+         *
+         * @return
+         */
         public V getValue() {
             return value;
         }

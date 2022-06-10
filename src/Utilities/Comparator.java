@@ -12,9 +12,23 @@
  */
 package Utilities;
 
+/**
+ *
+ * @author Sergi
+ */
 public interface Comparator {
 
+    /**
+     *
+     * @param objeto
+     * @return
+     */
     int compara(Comparator objeto);
 
+    /**
+     *
+     * @param objeto
+     * @return
+     */
     boolean menorQue(Comparator objeto);
 }

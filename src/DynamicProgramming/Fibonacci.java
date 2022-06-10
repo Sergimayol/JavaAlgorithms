@@ -9,6 +9,11 @@ public class Fibonacci {
     private final int MAX;
     private long[] sequence;
 
+    /**
+     *
+     * @param max
+     * @throws Exception
+     */
     public Fibonacci(int max) throws Exception {
         if (max < 0) {
             throw new Exception("Cannot be negative values");
@@ -31,6 +36,10 @@ public class Fibonacci {
         return f[n];
     }
 
+    /**
+     *
+     * @return
+     */
     public long[] getSequence() {
         fib(this.MAX);
         return sequence;

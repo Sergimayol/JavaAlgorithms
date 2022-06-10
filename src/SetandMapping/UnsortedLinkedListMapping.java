@@ -34,7 +34,7 @@ public class UnsortedLinkedListMapping<K, V> implements Mapping<K, V> {
     private Node first;
 
     /**
-     *
+     * Constructor
      */
     public UnsortedLinkedListMapping() {
         this.first = null;
@@ -137,28 +137,52 @@ public class UnsortedLinkedListMapping<K, V> implements Mapping<K, V> {
         return new IteratorUnsortedLinkedListMapping();
     }
 
+    /**
+     * Pair of values (key, value)
+     */
     protected class Pair {
 
         private K key;
         private V value;
 
+        /**
+         *
+         * @param key
+         * @param value
+         */
         public Pair(K key, V value) {
             this.key = key;
             this.value = value;
         }
 
+        /**
+         *
+         * @return
+         */
         public K getKey() {
             return key;
         }
 
+        /**
+         *
+         * @param key
+         */
         public void setKey(K key) {
             this.key = key;
         }
 
+        /**
+         *
+         * @return
+         */
         public V getValue() {
             return value;
         }
 
+        /**
+         *
+         * @param value
+         */
         public void setValue(V value) {
             this.value = value;
         }

@@ -4,18 +4,33 @@ package DataStructures;
 /*
 Clase MatrizNxM, donde Ny M son enteros y N>=1 y M>=1
  */
+
+/**
+ *
+ * @author Sergi
+ */
+
 public class MatrixNxM implements java.io.Serializable {
 
     // ATRIBUTOS
     private int dimension1, dimension2;
     private double[][] elementos;
 
+    /**
+     *
+     * @param dim1
+     * @param dim2
+     */
     public MatrixNxM(int dim1, int dim2) {
         dimension1 = dim1;
         dimension2 = dim2;
         elementos = new double[dimension1][dimension2];
     }
 
+    /**
+     *
+     * @param a
+     */
     public MatrixNxM(double[][] a) {
         dimension1 = a.length;
         dimension2 = a[0].length;
@@ -25,6 +40,11 @@ public class MatrixNxM implements java.io.Serializable {
 
     //lleva a cabo la conversión a String de un objeto MatrizNxM con fines
     //de visualización
+
+    /**
+     *
+     * @return
+     */
     @Override
     public String toString() {
         String salida = "";
@@ -38,6 +58,13 @@ public class MatrixNxM implements java.io.Serializable {
     }
 
     //método de clase que lleva a cabo la suma de dos objetos MatrizNxM dados por parámetro
+
+    /**
+     *
+     * @param a
+     * @param b
+     * @return
+     */
     public static MatrixNxM suma(MatrixNxM a, MatrixNxM b) {
         MatrixNxM resultado = null;
         try {
@@ -62,6 +89,12 @@ public class MatrixNxM implements java.io.Serializable {
 
     //método de objeto que lleva a cabo la suma de un objeto MatrizNxM con otro objeto 
     //MatrixNxM dado por parámetro
+
+    /**
+     *
+     * @param b
+     * @return
+     */
     public MatrixNxM suma(MatrixNxM b) {
         MatrixNxM resultado = null;
         try {
@@ -85,6 +118,13 @@ public class MatrixNxM implements java.io.Serializable {
     }
 
     //método de clase que lleva a cabo la resta de dos objetos MatrizNxM dados por parámetro
+
+    /**
+     *
+     * @param a
+     * @param b
+     * @return
+     */
     public static MatrixNxM resta(MatrixNxM a, MatrixNxM b) {
         MatrixNxM resultado = null;
         try {
@@ -109,6 +149,12 @@ public class MatrixNxM implements java.io.Serializable {
 
     //método de objeto que lleva a cabo la suma de un objeto MatrizNxM con otro objeto 
     //MatrixNxM dado por parámetro
+
+    /**
+     *
+     * @param b
+     * @return
+     */
     public MatrixNxM resta(MatrixNxM b) {
         MatrixNxM resultado = null;
         try {
@@ -133,6 +179,13 @@ public class MatrixNxM implements java.io.Serializable {
 
     //método de clase que lleva a cabo el producto de dos objetos MatrixNxM dados
     //por parámetro
+
+    /**
+     *
+     * @param a
+     * @param b
+     * @return
+     */
     public static MatrixNxM producto(MatrixNxM a, MatrixNxM b) {
         MatrixNxM resultado = null;
         try {
@@ -162,6 +215,12 @@ public class MatrixNxM implements java.io.Serializable {
 
     //método de objeto que lleva a cabo el producto de dos objetos MatrixNxM dados
     //por parámetro
+
+    /**
+     *
+     * @param b
+     * @return
+     */
     public MatrixNxM producto(MatrixNxM b) {
         MatrixNxM resultado = null;
         try {
@@ -191,6 +250,13 @@ public class MatrixNxM implements java.io.Serializable {
 
     //método de clase que lleva a cabo la comparación a nivel de igualdad de dos
     //objetos MatrixNxM dados por parámetro
+
+    /**
+     *
+     * @param a
+     * @param b
+     * @return
+     */
     public static boolean iguales(MatrixNxM a, MatrixNxM b) {
         //verificar si tienen las mismas dimensiones
         if ((a.dimension1 == b.dimension2)
@@ -211,6 +277,12 @@ public class MatrixNxM implements java.io.Serializable {
 
     //método de objeto que lleva a cabo la comparación a nivel de igualdad un objeto MatrixNxM
     //con otro objeto MatrixNxM dado por parámetro
+
+    /**
+     *
+     * @param b
+     * @return
+     */
     public boolean iguales(MatrixNxM b) {
         //verificar si tienen las mismas dimensiones
         if ((dimension1 == b.dimension2)
@@ -231,6 +303,11 @@ public class MatrixNxM implements java.io.Serializable {
 
     //método que lleva a cabo el cálculo de la matriz traspuesta de un objeto
     //MatrixNxM
+
+    /**
+     *
+     * @return
+     */
     public MatrixNxM traspuesta() {
         MatrixNxM resultado = new MatrixNxM(dimension1, dimension2);
         for (int fila = 0; fila < dimension1; fila++) {
